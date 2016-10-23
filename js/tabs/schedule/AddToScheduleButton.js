@@ -48,6 +48,7 @@ const SAVED_LABEL = 'Saved to your schedule';
 const ADD_LABEL = 'Add to my schedule';
 
 class AddToScheduleButton extends React.Component {
+  // 类型判断
   props: Props;
   state: State;
 
@@ -60,7 +61,7 @@ class AddToScheduleButton extends React.Component {
 
   render() {
     const colors = this.props.isAdded ? ['#4DC7A4', '#66D37A'] : ['#6A6AD5', '#6F86D9'];
-
+    // 动画对象
     const addOpacity = {
       opacity: this.state.anim.interpolate({
         inputRange: [0, 1],
@@ -113,6 +114,7 @@ class AddToScheduleButton extends React.Component {
       }],
     };
 
+    
     return (
       <TouchableOpacity
         accessibilityLabel={this.props.isAdded ? SAVED_LABEL : ADD_LABEL}
